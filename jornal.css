@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Silkscreen:wght@400;700&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  background-color: #8a6a3a;
+  background-size: 128px 128px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' shape-rendering='crispEdges'><rect width='64' height='16' fill='%239c7a45'/><rect y='16' width='64' height='16' fill='%238a6a3a'/><rect y='32' width='64' height='16' fill='%23a5834d'/><rect y='48' width='64' height='16' fill='%2392713f'/><path fill='%235e4426' d='M0 15h64v1H0zM0 31h64v1H0zM0 47h64v1H0zM0 63h64v1H0zM40 0h1v15h-1zM12 16h1v15h-1zM52 32h1v15h-1zM28 48h1v15h-1z'/><path fill='%23775a30' d='M4 5h10v1H4zM46 9h12v1H46zM20 22h14v1H20zM2 26h8v1H2zM8 38h12v1H8zM44 42h10v1H44zM30 54h12v1H30zM6 58h8v1H6z'/><path fill='%23b79258' d='M18 3h8v1h-8zM50 20h8v1h-8zM24 36h10v1H24zM10 52h8v1h-8z'/></svg>");
+}
+
+.jj { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 24px; padding: 24px; min-height: 100vh; }
+
+/* ---------- Menu lateral (placas de madeira) ---------- */
+.jj-side { display: flex; flex-direction: column; }
+.jj-logo {
+  display: block;
+  padding: 6px 0 22px;
+  font: 700 36px/1 'UnifrakturCook', serif;
+  color: #f2c94c;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 3px 3px 0 #231409;
+}
+.jj-menu a {
+  display: block;
+  margin-bottom: 10px;
+  padding: 14px 12px;
+  background: #4a3018;
+  border: 3px solid #231409;
+  font: 700 14px 'Silkscreen', monospace;
+  color: #f2c94c;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 #231409;
+}
+.jj-menu a:hover { background: #6b4a24; }
+.jj-menu a.on { background: #d4aa48; color: #2a1a06; text-shadow: none; }
+
+.jj-redes { margin-top: auto; display: flex; justify-content: center; gap: 10px; padding-top: 24px; }
+.jj-redes a {
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  background: #4a3018;
+  border: 3px solid #231409;
+  border-radius: 50%;
+  font-size: 22px;
+  color: #f2c94c;
+  text-decoration: none;
+}
+.jj-redes a:hover { background: #d4aa48; color: #2a1a06; }
+
+/* ---------- Filtro ---------- */
+.jj-main { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.jj-bar { display: flex; gap: 24px; padding: 10px 16px; background: #4a3018; border: 3px solid #231409; }
+.jj-bar label { display: flex; align-items: center; gap: 10px; font: 700 13px 'Silkscreen', monospace; color: #f2c94c; }
+.jj-bar select {
+  height: 34px;
+  padding: 0 10px;
+  background: #d4aa48;
+  color: #2a1a06;
+  border: 3px solid #231409;
+  border-radius: 0;
+  font: 400 15px 'Old Standard TT', serif;
+}
+
+/* ---------- Papel do jornal ---------- */
+.jj-paper {
+  padding: 24px 32px 32px;
+  background: #d4aa48;
+  border: 8px double #5b3f12;
+  color: #2a1a06;
+  font-family: 'Old Standard TT', serif;
+}
+.jj-paper h1 { font: 700 clamp(3rem, 8vw, 5rem)/1 'UnifrakturCook', serif; text-align: center; }
+.jj-line {
+  display: flex; justify-content: space-between;
+  margin-top: 10px; padding: 5px 0;
+  border-top: 3px solid #2a1a06; border-bottom: 1px solid #2a1a06;
+  font: italic 400 14px 'Old Standard TT', serif;
+}
+
+.jj-man { margin-top: 22px; padding-bottom: 20px; border-bottom: 3px double #2a1a06; }
+.jj-man h2 { font: 700 clamp(1.8rem, 4vw, 2.6rem)/1.1 'Old Standard TT', serif; text-align: center; }
+.jj-man p { margin-top: 16px; font-size: 1.1rem; line-height: 1.6; text-align: justify; }
+.jj-man p:first-letter { float: left; padding: 6px 8px 0 0; font: 700 3.6rem/.85 'UnifrakturCook', serif; }
+
+.d { display: block; margin-bottom: 8px; text-align: center; font: italic 400 14px 'Old Standard TT', serif; color: #5b3f12; }
+
+.jj-lis { margin-top: 20px; column-count: 2; column-gap: 28px; column-rule: 1px solid #5b3f12; }
+.jj-n { break-inside: avoid; margin-bottom: 18px; padding-bottom: 16px; border-bottom: 1px solid #5b3f12; }
+.jj-n .d { text-align: left; }
+.jj-n h3 { font: 700 1.3rem/1.2 'Old Standard TT', serif; }
+.jj-n p { margin-top: 8px; font-size: 1rem; line-height: 1.55; text-align: justify; }
+
+/* ---------- Celular ---------- */
+@media (max-width: 760px) {
+  .jj { grid-template-columns: 1fr; padding: 12px; gap: 14px; }
+  .jj-side { flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+  .jj-logo { padding: 0; font-size: 28px; }
+  .jj-menu { display: flex; flex-wrap: wrap; gap: 8px; width: 100%; order: 3; }
+  .jj-menu a { margin: 0; padding: 10px; font-size: 12px; }
+  .jj-redes { margin: 0; padding: 0; }
+  .jj-paper { padding: 16px; }
+  .jj-lis { column-count: 1; }
+}

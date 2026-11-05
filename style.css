@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@800&display=swap');
+ 
+:root {
+  --noite: #07040f;
+  --roxo: #a21cff;
+  --amarelo: #ffe600;
+  --ouro: #f5b800;
+}
+ 
+* { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--noite);
+  overflow: hidden;
+}
+ 
+/* ---------- Fundo desfocado ---------- */
+.fundo {
+  position: fixed;
+  inset: 0;
+  filter: blur(70px);
+}
+ 
+.orbe {
+  position: absolute;
+  border-radius: 50%;
+  opacity: .75;
+  animation: flutuar 14s ease-in-out infinite alternate;
+}
+.orbe.roxo     { width: 55vmax; height: 55vmax; background: var(--roxo);   top: -15%; left: -12%; }
+.orbe.amarelo  { width: 40vmax; height: 40vmax; background: var(--amarelo); bottom: -18%; right: -8%; animation-delay: -5s; }
+.orbe.violeta  { width: 35vmax; height: 35vmax; background: #5b13b8;       bottom: 5%;  left: 30%; animation-delay: -9s; }
+ 
+@keyframes flutuar {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(6vmax, -4vmax) scale(1.12); }
+}
+ 
+/* ---------- Quadrado central ---------- */
+.quadro {
+  position: relative;
+  width: min(88vw, 520px);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(28px, 8vw, 56px);
+  padding: 8%;
+  border-radius: 28px;
+  background: #000;
+  border: 2px solid rgba(162, 28, 255, .7);
+  box-shadow:
+    0 0 0 1px rgba(255, 230, 0, .35),
+    0 0 60px rgba(162, 28, 255, .45),
+    0 30px 80px rgba(0, 0, 0, .6);
+}
+ 
+/* O fundo preto do JPEG some sobre o quadro */
+.logo {
+  width: 100%;
+  height: auto;
+  mix-blend-mode: screen;
+}
+ 
+/* ---------- Botão ---------- */
+.botao {
+  position: relative;
+  overflow: hidden;
+  padding: 16px 44px;
+  border-radius: 999px;
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 800;
+  font-size: clamp(1.05rem, 4.5vw, 1.35rem);
+  letter-spacing: .04em;
+  text-decoration: none;
+  color: #2a1500;
+  background: linear-gradient(180deg, #fff27a 0%, var(--amarelo) 45%, var(--ouro) 100%);
+  box-shadow:
+    0 6px 0 #a87a00,
+    0 12px 28px rgba(255, 230, 0, .4);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+ 
+/* Brilho que passa pelo botão */
+.botao::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -80%;
+  width: 50%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .7), transparent);
+  transform: skewX(-20deg);
+  transition: left .6s ease;
+}
+ 
+.botao:hover { transform: translateY(-3px); box-shadow: 0 9px 0 #a87a00, 0 18px 36px rgba(255, 230, 0, .55); }
+.botao:hover::after { left: 130%; }
+.botao:active { transform: translateY(5px); box-shadow: 0 1px 0 #a87a00, 0 6px 14px rgba(255, 230, 0, .4); }
+.botao:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+ 
+@media (prefers-reduced-motion: reduce) {
+  .orbe { animation: none; }
+  .botao, .botao::after { transition: none; }
+}
+ 

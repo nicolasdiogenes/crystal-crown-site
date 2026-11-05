@@ -1,0 +1,43 @@
+.pg-main { min-width: 0; padding: 0 12px; }
+
+.pg-rolo {
+  height: 22px;
+  margin: 0 -12px;
+  background: #8a5a1c;
+  border: 3px solid #231409;
+  border-radius: 11px;
+}
+
+.pg-papel {
+  padding: 28px 36px 36px;
+  background: #dcb95f;
+  border-left: 3px solid #5b3f12;
+  border-right: 3px solid #5b3f12;
+  color: #2a1a06;
+  font-family: 'Old Standard TT', serif;
+}
+.pg-papel h1 { font: 700 clamp(3rem, 8vw, 4.5rem)/1 'UnifrakturCook', serif; text-align: center; }
+
+.pg-sub {
+  margin: 10px 0 24px;
+  padding: 5px 0;
+  border-top: 3px solid #2a1a06;
+  border-bottom: 1px solid #2a1a06;
+  text-align: center;
+  font: italic 400 15px 'Old Standard TT', serif;
+}
+
+.pg-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+
+.pg-card { display: flex; gap: 16px; padding: 16px; border: 2px solid #5b3f12; background: #e6c978; }
+
+.pg-av { flex: none; width: 88px; height: 88px; position: relative; background: #8a6a3a; border: 3px solid #231409; overflow: hidden; }
+.pg-av img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pg-av.vazio::before { content: ""; position: absolute; left: 27px; top: 14px; width: 28px; height: 28px; background: #4a3018; }
+.pg-av.vazio::after  { content: ""; position: absolute; left: 12px; top: 44px; width: 58px; height: 38px; background: #4a3018; }
+
+.pg-card h3 { font: 700 1.3rem/1.15 'Old Standard TT', serif; }
+.pg-cargo { display: block; margin: 4px 0 8px; font: 700 12px 'Silkscreen', monospace; color: #5b3f12; }
+.pg-card p { font-size: 1rem; line-height: 1.5; }
+
+@media (max-width: 760px) { .pg-papel { padding: 18px; } }

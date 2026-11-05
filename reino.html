@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jornal · Crystal Crown</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="jornal.css">
+</head>
+<body>
+  <div class="jj">
+
+    <aside class="jj-side">
+      <a class="jj-logo" href="index.html">Crystal<br>Crown</a>
+
+      <nav class="jj-menu">
+        <a href="reino.html" class="on">Jornal</a>
+        <a href="mapa.html">Mapa</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="sobre.html">Sobre nós</a>
+      </nav>
+
+      <div class="jj-redes">
+        <a href="https://discord.gg/dYGchayRBG" target="_blank" rel="noopener"
+           title="Discord: Servidor da Recepção" aria-label="Discord: Servidor da Recepção">
+          <i class="ti ti-brand-discord"></i></a>
+        <a href="https://www.instagram.com/crystal_crown_oficial?psln=MWxvdm5qMGcwd3BsMQ==" target="_blank" rel="noopener"
+           title="Instagram" aria-label="Instagram">
+          <i class="ti ti-brand-instagram"></i></a>
+        <a href="https://www.tiktok.com/@crystal.crown.oficial?_r=1&_t=ZG-9Au9tFj6ocb" target="_blank" rel="noopener"
+           title="TikTok" aria-label="TikTok">
+          <i class="ti ti-brand-tiktok"></i></a>
+      </div>
+    </aside>
+
+    <div class="jj-main">
+      <header class="jj-bar">
+        <label>Mês <select id="m"><option value="">Todos</option></select></label>
+        <label>Ano <select id="a"><option value="">Todos</option></select></label>
+      </header>
+
+      <main class="jj-paper">
+        <h1>Jornal</h1>
+        <div class="jj-line"><span>Crystal Crown</span><span id="ed"></span></div>
+        <div id="man" class="jj-man"></div>
+        <div id="lis" class="jj-lis"></div>
+      </main>
+    </div>
+
+  </div>
+  <script src="jornal.js"></script>
+</body>
+</html>
