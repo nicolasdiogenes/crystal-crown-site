@@ -41,3 +41,13 @@
 .pg-card p { font-size: 1rem; line-height: 1.5; }
 
 @media (max-width: 760px) { .pg-papel { padding: 18px; } }
+
+.pg-card > div:last-child { min-width: 0; }
+.pg-card h3, .pg-card p, .pg-user { overflow-wrap: anywhere; }
+
+.pg-user {
+  display: block;
+  margin-top: 2px;
+  font: italic 400 .95rem 'Old Standard TT', serif;
+  color: #5b3f12;
+}
