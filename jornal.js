@@ -4,7 +4,7 @@ const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
 // Notícias 
 const noticias = [
   { titulo: "Crystal Crown despertará", mes: 11, ano: 2026,
-    resumo: "RESUMO." },
+    resumo: "Toda história começa em algum lugar. \n Um mundo cheio de possibilidades, segredos esperando para serem descobertos e histórias que ainda precisam ser contadas. \n Com o site finalmente no ar, gostaria de agradecer a todos que estão, até hoje, esperando pela verdadeira abertura do server. Com esta pequena abertura do site, posso afirmar que de hoje em diante a verdadeira lore do server será postada e vocês terão acesso aos verdadeiros criterios  de criação de personagem. \n Fiquem de olho nos chats e de pouco em pouco, tudo será revelado. ." },
 
   
 ];
