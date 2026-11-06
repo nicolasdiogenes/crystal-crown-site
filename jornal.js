@@ -3,16 +3,9 @@ const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
 
 // Notícias 
 const noticias = [
-  { titulo: "Crystal Crown despertará", mes: 10, ano: 2026,
+  { titulo: "Crystal Crown despertará", mes: 11, ano: 2026,
     resumo: "RESUMO." },
-  { titulo: "TÍTULO", mes: 10, ano: 2026,
-    resumo: "dildo dildo dildo dildo diçldio diolo" },
-  { titulo: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", mes: 10, ano: 2026,
-    resumo: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA." },
-  { titulo: "Vou surtar", mes: 10, ano: 2026,
-    resumo: "Dildo." },
-  { titulo: "aaaaaabbbccc", mes: 10, ano: 2026,
-    resumo: "Beyoncé." }
+
   
 ];
 
