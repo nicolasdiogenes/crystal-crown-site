@@ -1,0 +1,27 @@
+.fm-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+
+.fm-card {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  border: 2px solid #5b3f12;
+  background: #e6c978;
+}
+
+.fm-ico { font-size: 34px; color: #5b3f12; margin-bottom: 8px; }
+.fm-card h3 { font: 700 1.3rem/1.15 'Old Standard TT', serif; }
+.fm-card p { flex: 1; margin: 8px 0 16px; font-size: 1rem; line-height: 1.5; }
+
+.fm-btn {
+  display: block;
+  padding: 12px;
+  background: #4a3018;
+  border: 3px solid #231409;
+  font: 700 13px 'Silkscreen', monospace;
+  color: #f2c94c;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 #231409;
+}
+.fm-btn:hover { background: #6b4a24; }
+.fm-btn:focus-visible { outline: 3px solid #2a1a06; outline-offset: 2px; }
